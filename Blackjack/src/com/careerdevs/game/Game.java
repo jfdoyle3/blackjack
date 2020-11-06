@@ -1,15 +1,16 @@
 package com.careerdevs.game;
 
 import com.careerdevs.objects.Card;
+import com.careerdevs.objects.Deck;
+import com.careerdevs.ui.Console;
 
 public class Game {
 	
 	public static void playGame() {
-		
-		for(int i=0; i<10; i++) {
-			Card card=new Card();
-		
-		System.out.println(card.getValue()+card.SuitSym());
+
+		Deck deck=new Deck();
+		for (int i=0; i<deck.getDeck().size(); i++) {
+			Console.displayCard(deck,i);
 		}
 	}
 

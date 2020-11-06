@@ -13,7 +13,7 @@ public class Deck {
         
         public Deck()
         {
-            for (int face = 2; face <= 14; face++)
+            for (int face = 2; face <= 15; face++)
             {
                 for (int suits = 0; suits <= 3; suits++)
                 {
@@ -42,4 +42,11 @@ public class Deck {
 //           // shuffled.ToList<Card>();
 //              return shuffled.ToList<Card>();
 //        }
+		public List<Card> getDeck() {
+			return deck;
+		}
+
+
+
+        
 }

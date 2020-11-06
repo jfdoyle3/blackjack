@@ -19,7 +19,7 @@ public class Card {
     {
         Random newCard = new Random();
         Random newSuit = new Random();
-        this.value = newCard.nextInt(14)+2;
+        this.value = newCard.nextInt(16)+1;
         this.suit = newSuit.nextInt(4);
     }
     
@@ -37,5 +37,7 @@ public class Card {
 		return value;
 	}
 
-    
+    public String getSuitSym() {
+    	return this.suits[this.suit];
+    }
 }
