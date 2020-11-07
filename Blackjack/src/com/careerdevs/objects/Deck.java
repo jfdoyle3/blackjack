@@ -1,15 +1,15 @@
 package com.careerdevs.objects;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class Deck {
    
     
         private List<Card> deck = new ArrayList<Card>();
-        private List<List<Card>> hands = new ArrayList<List<Card>>();
-        private List<Card> shuffled = new ArrayList<Card>();
+      //  private List<List<Card>> hands = new ArrayList<List<Card>>();
+     //   private List<Card> shuffled = new ArrayList<Card>();
         
         public Deck()
         {
@@ -33,15 +33,14 @@ public class Deck {
                 }
             }
         }
-        //public void Shuffle()
-//        public List<Card> Shuffle()
-//        {
-//            Random rnd = new Random();
-//            IOrderedEnumerable<Card> shuffled = deck.OrderBy(Card -> rnd.Next());
-//            shuffled.GetEnumerator();
-//           // shuffled.ToList<Card>();
-//              return shuffled.ToList<Card>();
-//        }
+        
+       
+        public  List<Card> shuffleCards(){
+        	Collections.shuffle(this.deck);
+              return this.deck;
+        }
+        
+        
 		public List<Card> getDeck() {
 			return deck;
 		}
