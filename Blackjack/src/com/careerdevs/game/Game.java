@@ -11,9 +11,10 @@ public class Game {
 		deck.shuffleCards();
 		
 
-		for (int i = 0; i < deck.getDeck().size(); i++) {
-			Console.displayCard(deck, i);
-		}
+		
+			
+
+		
 
 	}
 
