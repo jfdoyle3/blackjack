@@ -3,12 +3,11 @@ package com.careerdevs.objects;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dealer {
-
+public class Hand {
 	private static List<String> hand = new ArrayList<>();
 	private static List<String> dealer = new ArrayList<>();
 
-	public  static void dealCards() {
+	public static void dealCards() {
 		Deck deck = new Deck();
 		deck.shuffleDeck();
 		for (int idx = 0; idx < 4; idx++) {
@@ -20,6 +19,5 @@ public class Dealer {
 			}
 
 		}
-
 	}
 }
