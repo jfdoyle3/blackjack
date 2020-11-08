@@ -10,15 +10,15 @@ import com.careerdevs.ui.Console;
 
 public class Game {
 
+	private static List<String> discardDeck=new ArrayList<>();
 	// System.out.println(deck.getDeck().get(index).getValue()+deck.getDeck().get(index).getSuitSym());
 	public static void playGame() {
 
 		Deck deck = new Deck();
 		deck.shuffleDeck();
-		for (int idx = 0; idx < deck.getDeck().size(); idx++) {
-			Console.displayCard(deck, idx);
-		}
+		Console.displayDeck(deck);
 		Console.horzLine();
+		
 		List<String> hand = new ArrayList<>();
 		List<String> dealer = new ArrayList<>();
 		// Create List of Hands
@@ -29,11 +29,13 @@ public class Game {
 			String topCard = deck.drawCard(idx);
 			if (idx % 2 == 0) {
 				hand.add(topCard);
+				discardDeck.add(topCard);
 			} else {
 				dealer.add(topCard);
+				discardDeck.add(topCard);
 			}
-
 		}
+		deck.removeCard(0);
 
 		// Output Player Hand
 		System.out.println("Hand");
@@ -46,7 +48,13 @@ public class Game {
 		for (String card : dealer)
 			System.out.print(card + " ");
 		Console.horzLine();
-
+		
+		Console.horzLine();
+		for (int idx = 0; idx < 5; idx++) {
+			deck.removeCard(idx);
+		}
+		Console.displayDeck(deck);
+		Console.horzLine();
 		// TODO: Totaling up Hand
 		System.out.println("Hand Total: ");
 
