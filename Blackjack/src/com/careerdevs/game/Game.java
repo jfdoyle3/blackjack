@@ -19,11 +19,11 @@ public class Game {
 			Console.displayCard(deck, idx);
 		}
 		Console.horzLine();
-
-		// Create List of Hands
 		List<String> hand = new ArrayList<>();
 		List<String> dealer = new ArrayList<>();
+		// Create List of Hands
 
+		int intCard = deck.getDeck().get(0).getValue();
 		// Dealing cards to Dealer and Player
 		for (int idx = 0; idx < 4; idx++) {
 			String topCard = deck.drawCard(idx);
@@ -49,13 +49,13 @@ public class Game {
 
 		// TODO: Totaling up Hand
 		System.out.println("Hand Total: ");
-		int cardAdded = 0;
-		for (int idx = 0; idx < hand.size(); idx++) {
-			String str = hand.get(idx).replaceAll("\\D+", "");
-			int cardInt = Integer.parseInt(str);
-			int cardInt1 = +cardAdded;
-			System.out.print(cardInt1);
-		}
+
+		String str = hand.get(0).replaceAll("\\D+", "");
+		String str2 = hand.get(1).replaceAll("\\D+", "");
+		int cardInt = Integer.parseInt(str);
+		int cardInt2 = Integer.parseInt(str2);
+		int cardTotal = cardInt + cardInt2;
+		System.out.print(cardTotal);
 
 	}
 

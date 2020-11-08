@@ -23,8 +23,8 @@ public class Deck {
 	}
 
 	public String drawCard(int card) {
-		String dealCard = this.deck.get(card).getValue() + this.deck.get(card).getSuitSym();
-		return dealCard;
+		String dealtCard = this.deck.get(card).getValue() + this.deck.get(card).getSuitSym();
+		return dealtCard;
 
 	}
 
