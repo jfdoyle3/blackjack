@@ -9,7 +9,7 @@ public class Deck {
 	private List<Card> deck = new ArrayList<Card>();
 
 	public Deck() {
-		for (int face = 2; face <= 15; face++) {
+		for (int face = 2; face <= 14; face++) {
 			for (int suits = 0; suits <= 3; suits++) {
 				Card card = new Card(face, suits);
 				this.deck.add(card);
@@ -25,7 +25,6 @@ public class Deck {
 	public String drawCard(int card) {
 		String dealtCard = this.deck.get(card).getValue() + this.deck.get(card).getSuitSym();
 		return dealtCard;
-
 	}
 
 	public List<Card> getDeck() {
