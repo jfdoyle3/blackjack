@@ -11,6 +11,8 @@ public class GameTwo {
 		Console.displayDeck(deck);
 		Console.horzLine();
 		
+		System.out.println(deck.getDeck().get(0).getValue());
+		
 		
 	}
 }

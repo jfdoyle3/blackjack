@@ -9,7 +9,7 @@ public class Main {
 	
 		
 		// Game.playGame();
-		// GameTwo.gameTwo();
+		 GameTwo.gameTwo();
 		 
 
 	
