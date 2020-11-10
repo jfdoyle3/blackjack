@@ -7,7 +7,7 @@ public class Card {
 	private int suit;
 	private String[] suits = { "S", "H", "C", "D" };
 	public String[] royal = { "J", "Q", "K" };
-	public boolean Ace;
+	public boolean Ace=false;
 
 	// TODO Need to add in J Q K A , replacing 11,12,13,14 : All Faces are 10
 	// TODO Ace to be a Boolean method True for High / False for Low : either

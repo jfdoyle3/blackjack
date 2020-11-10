@@ -10,7 +10,7 @@ public class Deck {
 	private List<Card> deck = new ArrayList<Card>();
 
 	public Deck() {
-		for (int face = 2; face <= 13; face++) {
+		for (int face = 1; face <= 13; face++) {
 			for (int suits = 0; suits <= 3; suits++) {
 				Card card = new Card(face, suits);
 				this.deck.add(card);

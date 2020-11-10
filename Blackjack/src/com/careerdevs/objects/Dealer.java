@@ -18,8 +18,6 @@ public class Dealer {
 			} else {
 				dealer.add(topCard);
 			}
-
 		}
-
 	}
 }
