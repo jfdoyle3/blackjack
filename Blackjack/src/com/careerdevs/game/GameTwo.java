@@ -21,10 +21,10 @@ public class GameTwo {
 		
 		Console.displayDeck(deck);
 		Console.horzLine();
-		List<Card> hand=new ArrayList<>();
+		List<String> hand=new ArrayList<>();
 		for (int i=0; i<4; i++) {
 
-			hand.add();
+			hand.add(deck.drawCard(i));
 		}
 		deck.removeCard(0);
 		
