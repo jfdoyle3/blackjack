@@ -27,8 +27,8 @@ public class Card2 {
 		default:
 			output= value == 10 ? Integer.toString(value):""+value;
 				
-			
 		}
+		return output;
 	}
 
 }
