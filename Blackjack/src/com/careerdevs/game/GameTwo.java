@@ -3,7 +3,7 @@ package com.careerdevs.game;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.careerdevs.objects.myCard;
+
 import com.careerdevs.objects.Deck;
 import com.careerdevs.ui.Console;
 

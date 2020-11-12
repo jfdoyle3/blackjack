@@ -27,7 +27,7 @@ public class Card {
 			output = "K"+suit;
 			break;
 		default:
-			output = value == 10 ? Integer.toString(value) : "" +value+suit;
+			output = value == 10 ? Integer.toString(value)+suit : "" +value+suit;
 		}
 		return output;
 	}
