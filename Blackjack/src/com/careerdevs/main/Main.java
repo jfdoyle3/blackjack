@@ -1,6 +1,7 @@
 package com.careerdevs.main;
 
 import com.careerdevs.game.Game;
+import com.careerdevs.game.GameThree;
 import com.careerdevs.game.GameTwo;
 
 public class Main {
@@ -9,11 +10,10 @@ public class Main {
 	
 		
 		// Game.playGame();
-		 GameTwo.gameTwo();
-		 
-
-	
-	}
+		// GameTwo.gameTwo();
+		GameThree.playGame();
+		
+			}
 
 
 }
