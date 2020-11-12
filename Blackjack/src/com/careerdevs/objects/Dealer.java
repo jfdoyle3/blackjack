@@ -3,7 +3,6 @@ package com.careerdevs.objects;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.careerdevs.game.GameThree;
 
 public class Dealer {
 
@@ -16,7 +15,6 @@ public class Dealer {
 		deck.shuffle();
 		for (int idx = 0; idx < 4; idx++) {
 			Card topCard = deck.draw();
-			int cardInt=topCard.getValue();
 			if (idx % 2 == 0) {
 				hand.add(topCard);
 			} else {  
@@ -32,13 +30,15 @@ public class Dealer {
 		System.out.println("hand "+handTotal);
 		System.out.println("Dealer");
 		for (Card card : dealer) {
-			
-			
 			System.out.println(card.toString());
 		}
 		int dealerTotal=addHand(dealer);
 		System.out.println("Deal "+dealerTotal);
+		
+		
 	}
+	
+
 	public static  int addHand(List<Card> card) {
 			for (Card l : card) {
 			int i=l.getValue();

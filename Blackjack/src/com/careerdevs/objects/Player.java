@@ -10,9 +10,8 @@ public class Player {
 	private int wallet;
 	private static List<String> hand = new ArrayList<>();
 	
-	public Player(String playerName, int bet, int wallet) {
+	public Player(String playerName, int wallet) {
 		this.playerName=playerName;
-		this.bet=bet;
 		this.wallet=wallet;
 	}
 		

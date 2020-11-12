@@ -6,12 +6,19 @@ import java.util.List;
 import com.careerdevs.objects.Card;
 import com.careerdevs.objects.Dealer;
 import com.careerdevs.objects.Deck;
+import com.careerdevs.objects.Player;
 import com.careerdevs.ui.Console;
+import com.careerdevs.ui.Input;
 
 public class GameThree {
-	private static int sum = 0;
+
 
 	public static void playGame() {
+		
+		Console.askPlayName();
+		String playerName=Input.inputString();
+		Player player=new Player(playerName, 100);
+		Console.welcomePlayer(player.getPlayerName(), player.getWallet());
 		List<Integer> hand = new ArrayList<>();
 		Deck deck = new Deck();
 
@@ -19,26 +26,6 @@ public class GameThree {
 		System.out.println(deck.toString());
 
 		Dealer.dealCards();
-//		Card card = deck.draw();
-//		Console.displayCard(card);
-//		Card card2 = deck.draw();
-//		Console.displayCard(card2);
-//		Card card3 = deck.draw();
-//		Console.displayCard(card3);
-//		hand.add(card.getValue());
-//		hand.add(card2.getValue());
-//		hand.add(card3.getValue());
-//		addHand(hand);
 
-	}
-
-	public static void addHand(List<Integer> card) {
-		for (Integer i : card) {
-			if (i > 10) {
-				i = 10;
-			}
-			sum += i;
-		}
-		System.out.println(sum);
 	}
 }

@@ -12,7 +12,12 @@ public class Console {
 	public static void horzLine() {
 		System.out.println("\n-----------------------------------------------------------------------------\n");
 	}
+	
+	public static void askPlayName() {
+		System.out.print("What is the player name? ");
+	}
 
-	
-	
+	public static void welcomePlayer(String name, int wallet) {
+		System.out.printf("Welcome %s to the game. You have %d chips to start\n\n\n",name,wallet);
+	}
 }

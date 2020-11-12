@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Input {
 
 	
-	private Scanner input=new Scanner(System.in);
+	private static Scanner input=new Scanner(System.in);
 	
-	public String inputString() {
+	public static String inputString() {
 		return input.next();
 	}
 	
