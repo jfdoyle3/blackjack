@@ -26,25 +26,27 @@ public class Dealer {
 		}
 		System.out.println("Hand");
 		for (Card card : hand) {
-			int sum=addHand(card);
-			System.out.println(card.toString()+"       "+sum);
-			
+			System.out.println(card.toString());
 		}
-		
+		int handTotal=addHand(hand);
+		System.out.println("hand "+handTotal);
 		System.out.println("Dealer");
 		for (Card card : dealer) {
-			int sum2=addHand(card);
-			System.out.println(card.toString()+"       "+sum2);
-		}
-		
-	}
-	public static  int addHand(Card card) {
 			
-			int i=card.getValue();
+			
+			System.out.println(card.toString());
+		}
+		int dealerTotal=addHand(dealer);
+		System.out.println("Deal "+dealerTotal);
+	}
+	public static  int addHand(List<Card> card) {
+			for (Card l : card) {
+			int i=l.getValue();
 			if (i > 10) {
 				i = 10;
 			}
 			sum += i;
+			}
 		return sum;
 	}
 }
