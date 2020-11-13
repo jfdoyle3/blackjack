@@ -15,21 +15,21 @@ public class Card {
 		String output = "";
 		switch (value) {
 		case 1:
-			output = "A"+suit;
+			output = "A";
 			break;
 		case 11:
-			output = "J"+suit;
+			output = "J";
 			break;
 		case 12:
-			output = "Q"+suit;
+			output = "Q";
 			break;
 		case 13:
-			output = "K"+suit;
+			output = "K";
 			break;
 		default:
-			output = value == 10 ? Integer.toString(value)+suit : "" +value+suit;
+			output = value == 10 ? Integer.toString(value) : "" +value;
 		}
-		return output;
+		return output+suit;
 	}
 	
 	public int getValue() {

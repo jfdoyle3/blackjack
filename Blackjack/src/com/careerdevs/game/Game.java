@@ -16,7 +16,7 @@ public class Game {
 	Console.askPlayerName();
 	String playerName=Input.inputString();
 	Player player=new Player(playerName, 100);
-	Console.welcomePlayer(player.getPlayerName(),player.getWallet());
+	Console.welcomePlayer(player.getPlayerName(),player.getChips());
 	Dealer.dealCards();
 
 	}

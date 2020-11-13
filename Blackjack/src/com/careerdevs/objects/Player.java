@@ -7,20 +7,20 @@ public class Player {
 
 	private String playerName;
 	private int bet;
-	private int wallet;
+	private int chips;
 	private static List<String> hand = new ArrayList<>();
 	
-	public Player(String playerName, int wallet) {
+	public Player(String playerName, int chips) {
 		this.playerName=playerName;
-		this.wallet=wallet;
+		this.chips=chips;
 	}
 		
 	public int getBet() {
 		return bet;
 	}
 
-	public int getWallet() {
-		return wallet;
+	public int getChips() {
+		return chips;
 	}
 	
 	public String getPlayerName() {
