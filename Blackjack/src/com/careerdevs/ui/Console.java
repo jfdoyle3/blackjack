@@ -13,7 +13,7 @@ public class Console {
 		System.out.println("\n-----------------------------------------------------------------------------\n");
 	}
 	
-	public static void askPlayName() {
+	public static void askPlayerName() {
 		System.out.print("What is the player name? ");
 	}
 

@@ -33,6 +33,9 @@ public class Card {
 	}
 	
 	public int getValue() {
+		if (this.value > 10) {
+			this.value = 10;
+		}
 		return this.value;
 	}
 	
