@@ -15,9 +15,13 @@ public class Game {
 	public static void playGame() {
 	Console.askPlayerName();
 	String playerName=Input.inputString();
-	Player player=new Player(playerName, 100);
+	Player player=new Player(playerName, 1);
 	Console.welcomePlayer(player.getPlayerName(),player.getChips());
-	Dealer.dealCards();
+	Console.horzLine();
+	Player.placeBet(player.getChips());
+	//Dealer.dealCards();
+	
+	
 
 	}
 

@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Dealer {
 
+	private static boolean turn=false;
 	private static List<Card> hand = new ArrayList<>();
-
 	private static List<Card> dealer = new ArrayList<>();
 
 	public static void dealCards() {
@@ -17,9 +17,9 @@ public class Dealer {
 		for (int idx = 0; idx < 4; idx++) {
 			Card topCard = deck.draw();
 			if (idx % 2 == 0) {
-				hand.add(topCard); // add to Play hand List
+				hand.add(topCard);
 			} else {
-				dealer.add(topCard); // add to Dealer List
+				dealer.add(topCard);
 
 			}
 		}
@@ -47,6 +47,18 @@ public class Dealer {
 	public static int addUpCards(List<Card> cards) {
 		int sum = cards.stream().mapToInt(card -> card.getValue()).sum();
 		return sum;
+	}
+	
+	public static void hit(Deck deck) {
+		Card topCard = deck.draw();
+			hand.add(topCard);
+	}
+	
+	public static int stand(List<Card> cards) {
+		turn=true;
+		int cardTally = addUpCards(cards);
+		return cardTally;
+		
 	}
 
 }

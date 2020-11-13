@@ -10,5 +10,8 @@ public class Input {
 	public static String inputString() {
 		return input.next();
 	}
+	public static int inputNumber() {
+		return input.nextInt();
+	}
 	
 }

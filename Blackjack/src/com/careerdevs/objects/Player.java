@@ -3,18 +3,40 @@ package com.careerdevs.objects;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.careerdevs.ui.Console;
+import com.careerdevs.ui.ErrorConsole;
+import com.careerdevs.ui.Input;
+
 public class Player {
 
+	private static int betAmount;
 	private String playerName;
 	private int bet;
 	private int chips;
+
 	private static List<String> hand = new ArrayList<>();
-	
+
 	public Player(String playerName, int chips) {
-		this.playerName=playerName;
-		this.chips=chips;
+		this.playerName = playerName;
+		this.chips = chips;
 	}
-		
+
+	public static void placeBet(int chips) {
+		boolean betPlaced = false;
+		Console.bet(chips);
+		do {
+			int betAmount = Input.inputNumber();
+			if (betAmount > chips) {
+				betPlaced = false;
+				ErrorConsole.errorBet(chips);
+			} else {
+				betPlaced = true;
+				Console.placedBet(betAmount);
+			}
+		} while (!betPlaced);
+
+	}
+
 	public int getBet() {
 		return bet;
 	}
@@ -22,11 +44,11 @@ public class Player {
 	public int getChips() {
 		return chips;
 	}
-	
+
 	public String getPlayerName() {
 		return playerName;
 	}
-	
+
 //	public  static void dealCards() {
 //		Deck deck = new Deck();
 //		deck.shuffleDeck();
