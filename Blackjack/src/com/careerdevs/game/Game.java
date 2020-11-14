@@ -20,7 +20,10 @@ public class Game {
 	Console.horzLine();
 	int bet=Player.placeBet(player.getChips());
 	Dealer.dealCards();
-	
+	System.out.println("Player");
+	Console.displayHand(player);
+	System.out.println("Dealer");
+	Console.displayHand(dealer);
 	
 	
 
