@@ -21,7 +21,7 @@ public class Player {
 		this.chips = chips;
 	}
 
-	public static void placeBet(int chips) {
+	public static int placeBet(int chips) {
 		boolean betPlaced = false;
 		Console.bet(chips);
 		do {
@@ -31,10 +31,10 @@ public class Player {
 				ErrorConsole.errorBet(chips);
 			} else {
 				betPlaced = true;
-				Console.placedBet(betAmount);
+				return betAmount;
 			}
 		} while (!betPlaced);
-
+		return betAmount;
 	}
 
 	public int getBet() {

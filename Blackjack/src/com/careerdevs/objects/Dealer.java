@@ -27,7 +27,7 @@ public class Dealer {
 		System.out.println("Hand");
 
 		for (Card card : hand) {
-			System.out.println(card.toString());
+			System.out.print(card.toString()+" ");
 		}
 
 		int handTotal = addUpCards(hand);
@@ -36,7 +36,7 @@ public class Dealer {
 		System.out.println("Dealer");
 
 		for (Card card : dealer) {
-			System.out.println(card.toString());
+			System.out.print(card.toString()+" ");
 		}
 		int dealerTotal = addUpCards(dealer);
 

@@ -18,8 +18,8 @@ public class Game {
 	Player player=new Player(playerName, 1);
 	Console.welcomePlayer(player.getPlayerName(),player.getChips());
 	Console.horzLine();
-	Player.placeBet(player.getChips());
-	//Dealer.dealCards();
+	int bet=Player.placeBet(player.getChips());
+	Dealer.dealCards();
 	
 	
 
