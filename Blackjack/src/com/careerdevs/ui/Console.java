@@ -1,6 +1,9 @@
 package com.careerdevs.ui;
 
+import java.util.List;
+
 import com.careerdevs.objects.Card;
+import com.careerdevs.objects.Dealer;
 
 public class Console {
 
@@ -36,6 +39,15 @@ public class Console {
 	
 	public static void placedBet(int betAmount ) {
 		System.out.printf("placed Bet: %d chips ",betAmount);
+	}
+	
+	public static void displayHand(List<Card> hand) {
+		for (Card card : hand) {
+			System.out.print(card.toString()+" ");
+		}
+
+		int handTotal = Dealer.addUpCards(hand);
+		System.out.println("hand " + handTotal);
 	}
 
 }

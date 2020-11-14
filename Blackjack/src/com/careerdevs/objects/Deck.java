@@ -26,7 +26,13 @@ public class Deck {
 	public Card draw() {
 		return cards.remove(cards.size() - 1);
 	}
-
+	
+	public String deckEmpty() {
+		if (cards.size()==0) {
+			System.out.println("deck empty!!!"); 
+		}
+		return "Deck empty";
+	}
 	@Override
 	public String toString() {
 		return "Deck [cards=" + cards.toString() + "]";

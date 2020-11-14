@@ -3,6 +3,8 @@ package com.careerdevs.objects;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.careerdevs.ui.Console;
+
 public class Dealer {
 
 	private static boolean turn=false;
@@ -25,22 +27,10 @@ public class Dealer {
 		}
 
 		System.out.println("Hand");
-
-		for (Card card : hand) {
-			System.out.print(card.toString()+" ");
-		}
-
-		int handTotal = addUpCards(hand);
-		System.out.println("hand " + handTotal);
-
+		Console.displayHand(hand);
 		System.out.println("Dealer");
+		Console.displayHand(dealer);
 
-		for (Card card : dealer) {
-			System.out.print(card.toString()+" ");
-		}
-		int dealerTotal = addUpCards(dealer);
-
-		System.out.println("Deal " + dealerTotal);
 
 	}
 
@@ -48,6 +38,7 @@ public class Dealer {
 		int sum = cards.stream().mapToInt(card -> card.getValue()).sum();
 		return sum;
 	}
+	
 	
 	public static void hit(Deck deck) {
 		Card topCard = deck.draw();
