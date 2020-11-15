@@ -8,28 +8,14 @@ import com.careerdevs.ui.Console;
 public class Dealer {
 
 	private static boolean turn = false;
-	private static List<Card> hand; 
+	private static List<Card> hand;
 
-	public static void dealCards() {
-		hand=new ArrayList<>();
-		Deck deck = new Deck();
+	public static List<Card> dealCards(Deck deck) {
+		hand = new ArrayList<>();
+		Card topCard = deck.draw();
+		hand.add(topCard);
 
-		deck.shuffle();
-
-		for (int idx = 0; idx < 4; idx++) {
-			Card topCard = deck.draw();
-			if (idx % 2 == 0) {
-				player.add(topCard);
-			} else {
-				dealer.add(topCard);
-
-			}
-		}
-
-		System.out.println("Player");
-		Console.displayHand(player);
-		System.out.println("Dealer");
-		Console.displayHand(dealer);
+		return hand;
 
 	}
 
