@@ -20,12 +20,13 @@ public class Game {
 	Console.welcomePlayer(player.getPlayerName(),player.getChips());
 	Console.horzLine();
 	int bet=Player.placeBet(player.getChips());
+	
 	List<Card> playerHand=Dealer.dealCards(deck);
-	List<Card> dealerHand=Dealer.dealCards(deck);
 	System.out.println("Player");
 	Console.displayHand(playerHand);
-	System.out.println("Dealer");
-	Console.displayHand(dealerHand);
+	Dealer.hit(deck, playerHand);
+	Console.displayHand(playerHand);
+
 	
 	
 
