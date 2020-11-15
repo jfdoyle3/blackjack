@@ -12,8 +12,10 @@ public class Dealer {
 
 	public static List<Card> dealCards(Deck deck) {
 		hand = new ArrayList<>();
+		for(int idx=0; idx<2; idx++) {
 		Card topCard = deck.draw();
 		hand.add(topCard);
+	}
 
 		return hand;
 

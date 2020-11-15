@@ -14,6 +14,7 @@ public class Game {
 	public static void playGame() {
 	Deck deck=new Deck();
 	deck.shuffle();
+	
 	Console.askPlayerName();
 	String playerName=Input.inputString();
 	Player player=new Player(playerName, 1);
@@ -24,8 +25,9 @@ public class Game {
 	List<Card> playerHand=Dealer.dealCards(deck);
 	System.out.println("Player");
 	Console.displayHand(playerHand);
-	Dealer.hit(deck, playerHand);
-	Console.displayHand(playerHand);
+	
+//	Dealer.hit(deck, playerHand);
+//	Console.displayHand(playerHand);
 
 	
 	
