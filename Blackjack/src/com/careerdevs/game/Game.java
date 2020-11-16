@@ -22,7 +22,7 @@ public class Game {
 	Console.horzLine();
 	int bet=Player.placeBet(player.getChips());
 	
-	List<Card> playerHand=Dealer.dealCards(deck);
+	List<Card> playerHand=Dealer.dealCards(deck,2);
 	System.out.println("Player");
 	Console.displayHand(playerHand);
 	

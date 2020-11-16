@@ -10,15 +10,13 @@ public class Dealer {
 	private static boolean turn = false;
 	private static List<Card> hand;
 
-	public static List<Card> dealCards(Deck deck) {
+	public static List<Card> dealCards(Deck deck, int card) {
 		hand = new ArrayList<>();
-		for(int idx=0; idx<2; idx++) {
-		Card topCard = deck.draw();
-		hand.add(topCard);
-	}
-
+		for (int idx = 0; idx < card; idx++) {
+			Card topCard = deck.draw();
+			hand.add(topCard);
+		}
 		return hand;
-
 	}
 
 	public static int addUpCards(List<Card> cards) {
