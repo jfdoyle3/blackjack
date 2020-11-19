@@ -28,7 +28,13 @@ public class Game {
 	int handTotal = Dealer.addUpCards(playerHand);
 	Console.consoleHit(handTotal);
 	String choice=Input.inputString();
-	System.out.println(choice);
+	if (choice.toLowerCase().equals("h")) {
+		System.out.println("Player Hit");
+	}
+	if (choice.toLowerCase().equals("s")) {
+		System.out.println("Player Stands");
+	}
+	
 	
 
 	
