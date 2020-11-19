@@ -34,7 +34,7 @@ public class Console {
 	}
 
 	public static void consoleHit(int totalCardCount) {
-		System.out.printf("You have %d showing. Do you want to Hit or Stand?", totalCardCount);
+		System.out.printf("\nYou have %d showing. Do you want to (H)it or (S)tand?", totalCardCount);
 	}
 	
 	public static void placedBet(int betAmount ) {
@@ -46,8 +46,8 @@ public class Console {
 			System.out.print(card.toString()+" ");
 		}
 
-		int handTotal = Dealer.addUpCards(hand);
-		System.out.println("hand " + handTotal);
 	}
+	
+	
 
 }

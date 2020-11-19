@@ -25,9 +25,11 @@ public class Game {
 	List<Card> playerHand=Dealer.dealCards(deck,2);
 	System.out.println("Player");
 	Console.displayHand(playerHand);
+	int handTotal = Dealer.addUpCards(playerHand);
+	Console.consoleHit(handTotal);
+	String choice=Input.inputString();
+	System.out.println(choice);
 	
-//	Dealer.hit(deck, playerHand);
-//	Console.displayHand(playerHand);
 
 	
 	
