@@ -20,8 +20,7 @@ public class Dealer {
 	}
 
 	public static int addUpCards(List<Card> cards) {
-		int sum = cards.stream().mapToInt(card -> card.getValue()).sum();
-		return sum;
+		return cards.stream().mapToInt(card -> card.getValue()).sum();
 	}
 
 	public static void hit(Deck deck, List<Card> hand) {
