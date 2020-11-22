@@ -18,6 +18,7 @@ public class Player {
 	public Player(String playerName, int chips) {
 		this.playerName = playerName;
 		this.chips = chips;
+		this.hand=hand;
 	}
 
 	public static int placeBet(int chips) {

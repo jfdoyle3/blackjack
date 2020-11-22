@@ -13,8 +13,7 @@ public class Dealer  {
 	public static List<Card> dealCards(Deck deck, int card) {
 		hand = new ArrayList<>();
 		for (int idx = 0; idx < card; idx++) {
-			Card topCard = deck.draw();
-			hand.add(topCard);
+			hand.add(deck.draw());
 		}
 		return hand;
 	}
@@ -24,14 +23,12 @@ public class Dealer  {
 	}
 
 	public static void hit(Deck deck, List<Card> hand) {
-		Card topCard = deck.draw();
-		hand.add(topCard);
+		hand.add(deck.draw());
 	}
 
 	public static int stand(List<Card> cards) {
 		turn = true;
-		int cardTally = addUpCards(cards);
-		return cardTally;
+		return addUpCards(cards);
 
 	}
 

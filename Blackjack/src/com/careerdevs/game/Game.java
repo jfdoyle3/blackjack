@@ -24,7 +24,7 @@ public class Game {
 		if(chips==0) {
 		Console.gameOver();
 		}
-		List<Card> playerHand = Dealer.dealCards(deck, 2);
+		 List<Card> playerHand = Dealer.dealCards(deck, 2);
 		System.out.println("Player");
 
 		boolean play = true;
@@ -52,8 +52,6 @@ public class Game {
 			}
 
 		} while (play);
-		
-			
 		
 	}
 
