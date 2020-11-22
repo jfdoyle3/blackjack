@@ -53,9 +53,9 @@ public class Console {
 	}
 
 	public static void bust(int bust) {
-		System.out.printf("Bust at %d", bust);
+		System.out.printf("Bust with %d", bust);
 	}
 	public static void gameOver() {
-	System.out.println("\nGame Over: You're busted you have no more chips to bet");
+	System.out.println("\nGame Over: You're busted you have no more chips");
 	}
 }

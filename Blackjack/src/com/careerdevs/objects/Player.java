@@ -9,7 +9,6 @@ import com.careerdevs.ui.Input;
 
 public class Player {
 
-	
 	private String playerName;
 	private int bet;
 	private int chips;
@@ -31,8 +30,7 @@ public class Player {
 				ErrorConsole.errorBet(chips);
 			} else {
 				betPlaced = true;
-				 chips-=betAmount;
-				return setChips(chips);
+				chips -= betAmount;
 			}
 		} while (!betPlaced);
 		return setChips(chips);
@@ -45,7 +43,6 @@ public class Player {
 	public int getChips() {
 		return chips;
 	}
-	
 
 	private static int setChips(int chips) {
 		return chips;

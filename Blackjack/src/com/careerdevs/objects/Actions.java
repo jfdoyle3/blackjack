@@ -1,6 +1,6 @@
 package com.careerdevs.objects;
 
-public interface Actions {
+public class Actions {
 	
 	
 
