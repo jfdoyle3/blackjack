@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.careerdevs.ui.Console;
 
-public class Dealer {
+public class Dealer  {
 
 	private static boolean turn = false;
 	private static List<Card> hand;

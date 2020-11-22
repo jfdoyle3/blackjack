@@ -44,6 +44,11 @@ public class Player {
 	public int getChips() {
 		return chips;
 	}
+	
+
+	public static int setChips(int chips) {
+		return chips;
+	}
 
 	public String getPlayerName() {
 		return playerName;

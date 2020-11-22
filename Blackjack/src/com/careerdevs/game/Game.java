@@ -17,24 +17,42 @@ public class Game {
 
 		Console.askPlayerName();
 		String playerName = Input.inputString();
-		Player player = new Player(playerName, 1);
+		Player player = new Player(playerName, 2);
 		Console.welcomePlayer(player.getPlayerName(), player.getChips());
 		Console.horzLine();
 		int bet = Player.placeBet(player.getChips());
 
 		List<Card> playerHand = Dealer.dealCards(deck, 2);
 		System.out.println("Player");
-		Console.displayHand(playerHand);
-		int handTotal = Dealer.addUpCards(playerHand);
-		Console.consoleHit(handTotal);
-		String choice = Input.inputString();
-		if (choice.toLowerCase().equals("h")) {
-			System.out.println("Player Hit");
-		}
-		if (choice.toLowerCase().equals("s")) {
-			System.out.println("Player Stands");
-		}
 
+		boolean play = true;
+		do {
+			
+			Console.displayHand(playerHand);
+			int handTotal = Dealer.addUpCards(playerHand);
+			if (handTotal > 21) {
+				Console.bust(handTotal);
+				
+				int chipsTotal=Player.setChips(bet);
+				System.out.printf("\nChips: %d", chipsTotal);
+				break;
+			}
+			Console.consoleHit(handTotal);
+			
+			String choice = Input.inputString();
+			if (choice.toLowerCase().equals("h")) {
+				Dealer.hit(deck, playerHand);
+			}
+			if (choice.toLowerCase().equals("s")) {
+				int stands = Dealer.stand(playerHand);
+				Console.stand(stands);
+				play = false;
+			}
+
+		} while (play);
+		
+			
+		
 	}
 
 }

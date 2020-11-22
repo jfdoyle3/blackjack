@@ -45,7 +45,15 @@ public class Console {
 		for (Card card : hand) {
 			System.out.print(card.toString()+" ");
 		}
+	}
+	public static void stand(int stands) {
+		System.out.printf("Player stands at %d",stands);
+	
 
+	}
+	
+	public static void bust(int bust) {
+		System.out.printf("Bust at %d",bust);
 	}
 	
 	
