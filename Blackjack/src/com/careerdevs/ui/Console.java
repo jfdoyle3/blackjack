@@ -36,26 +36,26 @@ public class Console {
 	public static void consoleHit(int totalCardCount) {
 		System.out.printf("\nYou have %d showing. Do you want to (H)it or (S)tand?", totalCardCount);
 	}
-	
-	public static void placedBet(int betAmount ) {
-		System.out.printf("placed Bet: %d chips ",betAmount);
+
+	public static void placedBet(int betAmount) {
+		System.out.printf("placed Bet: %d chips ", betAmount);
 	}
-	
+
 	public static void displayHand(List<Card> hand) {
 		for (Card card : hand) {
-			System.out.print(card.toString()+" ");
+			System.out.print(card.toString() + " ");
 		}
 	}
+
 	public static void stand(int stands) {
-		System.out.printf("Player stands at %d",stands);
-	
+		System.out.printf("Player stands at %d", stands);
 
 	}
-	
+
 	public static void bust(int bust) {
-		System.out.printf("Bust at %d",bust);
+		System.out.printf("Bust at %d", bust);
 	}
-	
-	
-
+	public static void gameOver() {
+	System.out.println("\nGame Over: You're busted you have no more chips to bet");
+	}
 }

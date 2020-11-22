@@ -20,8 +20,10 @@ public class Game {
 		Player player = new Player(playerName, 2);
 		Console.welcomePlayer(player.getPlayerName(), player.getChips());
 		Console.horzLine();
-		int bet = Player.placeBet(player.getChips());
-
+		int chips = Player.placeBet(player.getChips());
+		if(chips==0) {
+		Console.gameOver();
+		}
 		List<Card> playerHand = Dealer.dealCards(deck, 2);
 		System.out.println("Player");
 
@@ -32,9 +34,9 @@ public class Game {
 			int handTotal = Dealer.addUpCards(playerHand);
 			if (handTotal > 21) {
 				Console.bust(handTotal);
-				
-				int chipsTotal=Player.setChips(bet);
-				System.out.printf("\nChips: %d", chipsTotal);
+				if(chips==0) {
+					Console.gameOver();
+					}
 				break;
 			}
 			Console.consoleHit(handTotal);
