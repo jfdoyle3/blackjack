@@ -1,7 +1,13 @@
 package com.careerdevs.objects;
 
-public class Actions {
-	
-	
+import java.util.List;
+
+public interface Actions {
+
+	List<Card> dealCards(Deck deck, int card);
+
+
+
+
 
 }

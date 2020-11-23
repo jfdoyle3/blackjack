@@ -13,14 +13,21 @@ public class Player {
 	private int bet;
 	private int chips;
 
-	private static List<String> hand = new ArrayList<>();
+	private static List<Card> hand;
 
 	public Player(String playerName, int chips) {
 		this.playerName = playerName;
 		this.chips = chips;
-		this.hand=hand;
+		this.hand= new ArrayList<>();
 	}
-
+	
+	
+	public List<Card> dealCards(Deck deck, int card) {
+		for (int idx = 0; idx < card; idx++) {
+			hand.add(deck.draw());
+		}
+		return hand;
+	}
 	public static int placeBet(int chips) {
 		boolean betPlaced = false;
 		Console.bet(chips);

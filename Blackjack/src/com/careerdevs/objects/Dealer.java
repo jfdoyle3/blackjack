@@ -5,13 +5,16 @@ import java.util.List;
 
 import com.careerdevs.ui.Console;
 
-public class Dealer  {
+public  class Dealer  {
 
 	private static boolean turn = false;
 	private static List<Card> hand;
+	
+	public Dealer() {
+		Dealer.hand=new ArrayList<>();
+	}
 
-	public static List<Card> dealCards(Deck deck, int card) {
-		hand = new ArrayList<>();
+	public List<Card> dealCards(Deck deck, int card) {
 		for (int idx = 0; idx < card; idx++) {
 			hand.add(deck.draw());
 		}
@@ -22,14 +25,18 @@ public class Dealer  {
 		return cards.stream().mapToInt(card -> card.getValue()).sum();
 	}
 
-	public static void hit(Deck deck, List<Card> hand) {
-		hand.add(deck.draw());
+	public static void hit(Deck deck, List<Card>hand) {
+		 hand.add(deck.draw());
 	}
 
-	public static int stand(List<Card> cards) {
+	public static int stand(List<Card> playerHand) {
 		turn = true;
-		return addUpCards(cards);
+		return addUpCards( playerHand);
 
 	}
 
-}
+
+
+
+	}
+
