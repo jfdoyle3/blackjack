@@ -47,13 +47,13 @@ public class Console {
 		}
 	}
 
-	public static void stand(int stands) {
-		System.out.printf("Player stands at %d", stands);
+	public static void stand(String name, int stands) {
+		System.out.printf("\n%s stands at %d\n",name, stands);
 
 	}
 
-	public static void bust(int bust) {
-		System.out.printf("Bust with %d", bust);
+	public static void bust(String name,int bust) {
+		System.out.printf("\n%s bust with %d\n", name,bust);
 	}
 	public static void gameOver() {
 	System.out.println("\nGame Over: You're busted you have no more chips");

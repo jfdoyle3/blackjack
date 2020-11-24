@@ -9,25 +9,24 @@ import com.careerdevs.ui.Input;
 
 public class Player {
 
-	private String playerName;
 	private int bet;
 	private int chips;
 
 	private static List<Card> hand;
 
-	public Player(String playerName, int chips) {
-		this.playerName = playerName;
+	public Player(int chips) {
+
 		this.chips = chips;
-		this.hand= new ArrayList<>();
+		this.hand = new ArrayList<>();
 	}
-	
-	
+
 	public List<Card> dealCards(Deck deck, int card) {
 		for (int idx = 0; idx < card; idx++) {
 			hand.add(deck.draw());
 		}
 		return hand;
 	}
+
 	public static int placeBet(int chips) {
 		boolean betPlaced = false;
 		Console.bet(chips);
@@ -56,8 +55,10 @@ public class Player {
 		return chips;
 	}
 
-	public String getPlayerName() {
-		return playerName;
+	public static int wins(int chipsBet) {
+		int chipsWon = chipsBet * 2;
+		return setChips(chipsWon);
+
 	}
 
 //	public  static void dealCards() {
