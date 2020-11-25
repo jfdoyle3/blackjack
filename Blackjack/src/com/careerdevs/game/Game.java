@@ -23,9 +23,7 @@ public class Game {
 		// Console.welcomePlayer(playerName, player.getChips());
 		// Console.horzLine();
 		int chips = Player.placeBet(player.getChips());
-//		if (chips == 0) {
-//			Console.gameOver();
-//		}
+
 		// TODO: Add to Interface
 		List<Card> playerHand = player.dealCards(deck, 2);
 		List<Card> dealerHand = dealer.dealCards(deck, 2);
@@ -34,20 +32,14 @@ public class Game {
 		int dealerHandTable = GameRound.round("Dealer", deck, dealerHand);
 		int playerHandTable = GameRound.round(playerName, deck, playerHand);
 
-		System.out.printf("player --> %d", playerHandTable);
-		System.out.printf("dealer --> %d", dealerHandTable);
+		// refactor this method.
+		GameRound.endRound(dealerHandTable, playerHandTable, chips);
 		
+		// maybe move this statement to above method.
+		if (chips == 0) {
+		Console.gameOver();
+	}
 		
-		if (dealerHandTable > playerHandTable) {
-			System.out.printf("Dealer Wins with --> %d\n", dealerHandTable);
-		} else {
-			System.out.printf("Player Wins with --> %d\n", playerHandTable);
-			System.out.printf("\nPlayers wins--> %d ", Player.wins(chips));
-		}
-		if (dealerHandTable == playerHandTable) {
-			System.out.println("Push");
-
-		}
 
 	}
 
