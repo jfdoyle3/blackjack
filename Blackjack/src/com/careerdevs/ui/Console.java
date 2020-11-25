@@ -58,4 +58,8 @@ public class Console {
 	public static void gameOver() {
 	System.out.println("\nGame Over: You're busted you have no more chips");
 	}
+	
+	public static void win() {
+		System.out.println("Winner is: ");
+	}
 }
