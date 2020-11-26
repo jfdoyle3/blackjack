@@ -29,7 +29,7 @@ public class Game {
 		List<Card> playerHand = player.dealCards(deck, 2);
 	//	List<Card> dealerHand = dealer.dealCards(deck, 2);
 		
-		FindAce.changeAceValue(playerHand);
+		FindAce.changeAceValue(deck,playerHand);
 		
 		// TODO: Add to Interface
 	//	int dealerHandTable = GameRound.round("Dealer", deck, dealerHand);

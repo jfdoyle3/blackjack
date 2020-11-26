@@ -8,18 +8,21 @@ import com.careerdevs.ui.Console;
 
 public class FindAce {
 	
-	public static void changeAceValue(List<Card> hand) {
+	public static void changeAceValue(Deck deck,List<Card> hand) {
 		
 		System.out.println("<-- Detect Ace -->");
 		Console.displayHand(hand);
+		Dealer.hit(deck, hand);
 		System.out.println();
-		int min = hand.stream().mapToInt(card -> card.getValue()).min().getAsInt();
-		
-		if(min==1) {
-			System.out.println("Ace Found");
-		} else {
-			System.out.println("No Ace");
+		Console.displayHand(hand);
+		boolean ace=Card.findAce(hand);
+		int handTotal = Dealer.addUpCards(hand);
+		System.out.println("\nhandTotal: "+handTotal);
+		if (ace && handTotal>21) {
+			 handTotal = Dealer.addUpCards(hand)+10;
 		}
+		System.out.println("\nNew handTotal: "+handTotal);
+		
 	
 	}
 
