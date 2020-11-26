@@ -1,11 +1,17 @@
 package com.careerdevs.objects;
 
+import java.util.List;
 
+import java.util.List;
+
+import java.util.List;
+
+import com.careerdevs.ui.Console;
 
 public class Card {
 	private int value;
 	private String suit;
-	private boolean aceHigh;
+	private static boolean aceHigh;
 
 	public Card(int value, String suit) {
 		this.value = value;
@@ -38,13 +44,17 @@ public class Card {
 		if (this.value > 10) {
 			this.value = 10;
 		}
-		if (this.value==1 && this.aceHigh==true) {
-			this.value=11;
-		}
 		return this.value;
 	}
 	
-	
+	public static boolean findAce(List<Card> hand) {
+		int ace = hand.stream().mapToInt(card -> card.getValue()).min().getAsInt();
+		if(ace==1) {
+			aceHigh=true;
+		}
+		return aceHigh;
+		
+	}
 	
 
 }

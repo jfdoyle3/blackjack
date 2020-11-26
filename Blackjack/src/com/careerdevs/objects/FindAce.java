@@ -20,12 +20,7 @@ public class FindAce {
 		} else {
 			System.out.println("No Ace");
 		}
-		
-		
-		
-		
-		
-		
+	
 	}
 
 }
