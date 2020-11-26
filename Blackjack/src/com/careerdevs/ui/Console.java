@@ -59,7 +59,10 @@ public class Console {
 	System.out.println("\nGame Over: You're busted you have no more chips");
 	}
 	
-	public static void win() {
-		System.out.println("Winner is: ");
+	public static void win(String winner) {
+		System.out.printf("Winner is: %s",winner);
+	}
+	public static void push() {
+		System.out.println("Push");
 	}
 }

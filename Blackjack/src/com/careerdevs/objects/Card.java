@@ -5,10 +5,12 @@ package com.careerdevs.objects;
 public class Card {
 	private int value;
 	private String suit;
+	private boolean aceHigh;
 
 	public Card(int value, String suit) {
 		this.value = value;
 		this.suit = suit;
+		this.aceHigh=false;
 	}
 
 	public String toString() {
@@ -36,8 +38,13 @@ public class Card {
 		if (this.value > 10) {
 			this.value = 10;
 		}
+		if (this.value==1 && this.aceHigh==true) {
+			this.value=11;
+		}
 		return this.value;
 	}
+	
+	
 	
 
 }

@@ -32,7 +32,6 @@ public class Dealer {
 	public static int stand(List<Card> playerHand) {
 		turn = true;
 		return addUpCards(playerHand);
-
 	}
 
 }

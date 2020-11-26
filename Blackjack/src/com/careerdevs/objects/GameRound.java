@@ -9,10 +9,12 @@ public class GameRound {
 
 	private static int stands;
 
+	// Maybe break this up
 	public static int round(String name, Deck deck, List<Card> playerHand) {
 		boolean play = true;
 		do {
 			Console.displayHand(playerHand);
+			
 			int handTotal = Dealer.addUpCards(playerHand);
 			if (handTotal > 21) {
 				Console.bust(name, handTotal);
@@ -51,13 +53,13 @@ public class GameRound {
 	public static void endRound(int dealerHand, int playerHand, int chips) {
 
 		if (dealerHand > playerHand){
-			System.out.printf("Dealer Wins with --> %d\n", dealerHand);
+			Console.win("Dealer");
 		} else {
-			System.out.printf("Player Wins with --> %d\n", playerHand);
+			Console.win("Player");
 			System.out.printf("\nPlayers wins--> %d ", Player.wins(chips));
 		}
 		if (dealerHand == playerHand) {
-			System.out.println("Push");
+			Console.push();
 
 		}
 	}
