@@ -7,6 +7,8 @@ import java.util.OptionalInt;
 import com.careerdevs.ui.Console;
 
 public class FindAce {
+	// This method is to test and develop logic to change the Ace to be 1 or 11 based on the hand total
+	// Have to figure out how to handle if multiple Aces are in the hand too.
 	
 	public static void changeAceValue(Deck deck,List<Card> hand) {
 		
