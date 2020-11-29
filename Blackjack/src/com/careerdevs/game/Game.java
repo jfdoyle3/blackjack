@@ -21,27 +21,27 @@ public class Game {
 		String playerName = "Player";
 		Player player = new Player(2);
 		Dealer dealer = new Dealer();
-		// Console.welcomePlayer(playerName, player.getChips());
-		// Console.horzLine();
-		//int chips = Player.placeBet(player.getChips());
+		Console.welcomePlayer(playerName, player.getChips());
+		 Console.horzLine();
+		int chips = Player.placeBet(player.getChips());
 		
 		// TODO: Add to Interface
 		List<Card> playerHand = player.dealCards(deck, 2);
-	//	List<Card> dealerHand = dealer.dealCards(deck, 2);
+		List<Card> dealerHand = dealer.dealCards(deck, 2);
 		
-		FindAce.changeAceValue(deck,playerHand);
+	//	FindAce.changeAceValue(deck,playerHand);
 		
 		// TODO: Add to Interface
-	//	int dealerHandTable = GameRound.round("Dealer", deck, dealerHand);
-	//	int playerHandTable = GameRound.round(playerName, deck, playerHand);
+		int dealerHandTable = GameRound.round("Dealer", deck, dealerHand);
+		int playerHandTable = GameRound.round(playerName, deck, playerHand);
 
 		
-	//	GameRound.endRound(dealerHandTable, playerHandTable, chips);
+		GameRound.endRound(dealerHandTable, playerHandTable, chips);
 		
 		// maybe move this statement to above method.
-//		if (chips == 0) {
-//		Console.gameOver();
-//	}
+		if (chips == 0) {
+		Console.gameOver();
+	}
 		
 
 	}

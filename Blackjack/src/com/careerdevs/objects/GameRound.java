@@ -7,6 +7,7 @@ import com.careerdevs.ui.Input;
 
 public class GameRound {
 
+	
 	private static int stands;
 
 	// Maybe break this up
@@ -14,8 +15,11 @@ public class GameRound {
 		boolean play = true;
 		do {
 			Console.displayHand(playerHand);
-			
-			int handTotal = Dealer.addUpCards(playerHand);
+			boolean ace = Card.findAce(playerHand);
+			 int handTotal = Dealer.addUpCards(playerHand);
+			if (ace && handTotal < 21) {
+				handTotal = Dealer.addUpCards(playerHand) + 10;
+			}
 			if (handTotal > 21) {
 				Console.bust(name, handTotal);
 				stands = 0;
@@ -49,10 +53,10 @@ public class GameRound {
 
 		return stands;
 	}
-	
+
 	public static void endRound(int dealerHand, int playerHand, int chips) {
 
-		if (dealerHand > playerHand){
+		if (dealerHand > playerHand) {
 			Console.win("Dealer");
 		} else {
 			Console.win("Player");
