@@ -6,7 +6,7 @@ import java.util.OptionalInt;
 
 import com.careerdevs.ui.Console;
 
-public class FindAce {
+public class testFindAce {
 	// This method is to test and develop logic to change the Ace to be 1 or 11
 	// based on the hand total
 	// Have to figure out how to handle if multiple Aces are in the hand too.
@@ -17,13 +17,13 @@ public class FindAce {
 		// Dealer.hit(deck, hand);
 		// System.out.println();
 		// Console.displayHand(hand);
-		boolean ace = Card.findAce(hand);
+	//    boolean ace = Card.getAce(hand);
 		int handTotal = Dealer.addUpCards(hand);
-		if (ace && handTotal < 21) {
-			handTotal = Dealer.addUpCards(hand) + 10;
-		} else {
-			handTotal = Dealer.addUpCards(hand);
-		}
+//		if (ace && handTotal < 21) {
+//			handTotal = Dealer.addUpCards(hand) + 10;
+//		} else {
+//			handTotal = Dealer.addUpCards(hand);
+//		}
 		
 	}
 

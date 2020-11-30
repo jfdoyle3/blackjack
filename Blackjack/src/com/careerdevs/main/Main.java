@@ -8,6 +8,8 @@ public class Main {
 
 		Game.playGame();
 
+	//	list.set(list.indexOf("D"), "D_NEW");
+
 	}
 
 }
