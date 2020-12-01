@@ -26,6 +26,8 @@ Plan how to approach a way to create and code this game.
 
   ​	 (black jack wins!!)
 
+  
+
 - winner with highest value wins.
 
 - Push : Dealer ties with Player.
@@ -52,22 +54,25 @@ Plan how to approach a way to create and code this game.
 
   - Create Deck using objCards to make 52 unique cards in Deck OR
 
-    ​						Create a new cards  when needed keeping track for no duplicates, simulate a 52 a deck of cards.
+    ​	Ceate a new cards  when needed keeping track for no duplicates, simulate a 52 a deck of cards.
 
   - .shuffle         : shuffle  deck
 
-  - .findAce        : find if there's an Ace in play. Change Ace's value to 1 or 11 to get 21 or best possible hand on the first draw 
+  - 
 
-  - dealCards     : deals card to players
+  - .dealCards     : deals card to players
 
-  
+
+* black jack Hand
+* .findAce        : find if there's an Ace in play. Change Ace's value to 1 or 11 to get 21 or best possible hand on the first draw  
+* change royal value
 
 - ##### Player
 
   - Create Player(playerName, chips)    :   Player Name, Starting chips
-  - bet      : deduct initial bet from chips.  optional: (simple validation: can't under or over bet chips than current balance)
-  - setChips : *private method*: set the amount of chips based on: bet, winning,  pushing.
-  - getChips: get the amount of chips player currently has.
+  - .bet      : deduct initial bet from chips.  optional: (simple validation: can't under or over bet chips than current balance)
+  - .setChips : *private method*: set the amount of chips based on: bet, winning,  pushing.
+  - .getChips: get the amount of chips player currently has.
 
   
 
