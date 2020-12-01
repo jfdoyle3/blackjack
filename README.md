@@ -7,9 +7,7 @@ Plan how to approach a way to create and code this game.
 #### <u>1. How the Game is played:</u>
 
 - create a card
-
   ​	Aces can be 1 or 11, royal cards are worth 10
-
 - build a deck - shuffle deck
 - player places bet
 - deal card
