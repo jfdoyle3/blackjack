@@ -73,15 +73,29 @@ Plan how to approach a way to create and code this game.
 
 - Dealer/House - optional. 
 
-  -  Creates a Deck of Cards
-  - Shuffles Cards
-  - Deals Cards to itself and player
+  - Dealer            :   has a hand
 
-  ​	
+  - Deals Cards   : Deal cards to players
 
-- GameRound / Table : Various names to have the a space when the game take place
+  - .addUpCards : adds total  of value for the Cards
 
-  ​	
+  - .hit                   : request another Card  
 
+  - .stand              : Stops playing at handTotal
+
+    
+
+- StartGame
+
+   - playGame : starts game
+
+     
+
+- GameRound / virtTable : Descriptive NameSpace where the game takes place
+
+  	- .round         : Player through a round of blackjack
+	- .endRound  :  decide outcome .  
+  	- 
+  
   ​	
 
