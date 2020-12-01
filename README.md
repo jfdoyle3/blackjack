@@ -73,18 +73,15 @@ Plan how to approach a way to create and code this game.
 
 - Dealer/House - optional. 
 
-  - Dealer            :   has a hand
+  - Dealer       :   has a hand
 
-  - Deals Cards   : Deal cards to players
+  - Deals Cards  : Deal cards to players
 
   - .addUpCards : adds total  of value for the Cards
+  - .hit        : request another Card  
+  - .stand      : Stops playing at handTotal
 
-  - .hit                   : request another Card  
-
-  - .stand              : Stops playing at handTotal
-
-    
-
+ 
 - StartGame
 
    - playGame : starts game
