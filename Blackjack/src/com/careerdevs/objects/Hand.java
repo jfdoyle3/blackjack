@@ -10,8 +10,9 @@ public class Hand {
 	private String owner;
 	private static List<Card> hand;
 
-	public Hand() {
+	public Hand(String owner) {
 		this.hand = new ArrayList<>();
+		this.owner = this.owner;
 	}
 
 	public List<Card> dealCards(Deck deck, int card) {
@@ -25,8 +26,12 @@ public class Hand {
 		return cards.stream().mapToInt(card -> card.getValue()).sum();
 	}
 
-	
 	public static void showHand(List<Card> playerHand) {
 		Console.displayHand(playerHand);
 	}
+
+	public String getOwner() {
+		return owner;
+	}
+
 }

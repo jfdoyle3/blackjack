@@ -1,14 +1,15 @@
 package com.careerdevs.main;
 
-import com.careerdevs.game.Game;
+import com.careerdevs.objects.Hand;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Game.playGame();
+	//	Game.playGame();
 
-	//	list.set(list.indexOf("D"), "D_NEW");
+		Hand player=new Hand("Player");
+		
 
 	}
 

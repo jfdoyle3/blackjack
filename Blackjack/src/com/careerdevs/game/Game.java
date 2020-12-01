@@ -20,20 +20,20 @@ public class Game {
 		deck.shuffle();
 //		String playerName = "Player";
 //		Player player = new Player(2);
-		Dealer dealer = new Dealer();
+//		Dealer dealer = new Dealer();
 //		Console.welcomePlayer(playerName, player.getChips());
 //		Console.horzLine();
 //		int chips = Player.placeBet(player.getChips());
 
 		// TODO: Add to Interface
 //		List<Card> playerHand = player.dealCards(deck, 2);
-		List<Card> dealerHand = dealer.dealCards(deck, 2);
+//		List<Card> dealerHand = dealer.dealCards(deck, 2);
 		//for(Card cards : dealerHand)
 		//Console.displayCard(cards);
 		// FindAce.changeAceValue(deck,playerHand);
 
 		// TODO: Add to Interface
-		int dealerHandTable = GameRound.round("Dealer", deck, dealerHand);
+//		int dealerHandTable = GameRound.round("Dealer", deck, dealerHand);
 //		int playerHandTable = GameRound.round(playerName, deck, playerHand);
 //
 //		GameRound.endRound(dealerHandTable, playerHandTable, chips);
