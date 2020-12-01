@@ -40,7 +40,7 @@ Plan how to approach a way to create and code this game.
 
 #### <u>2. Game Objects and Methods to consider using:</u>
 
-- Card 
+- ##### Card 
 
   - card (value, suit): card's face value and which suit it's in.
 
@@ -48,7 +48,7 @@ Plan how to approach a way to create and code this game.
 
     
 
--  Deck
+-  ##### Deck
 
   - Create Deck using objCards to make 52 unique cards in Deck OR
 
@@ -62,7 +62,7 @@ Plan how to approach a way to create and code this game.
 
   
 
-- Player
+- ##### Player
 
   - Create Player(playerName, chips)    :   Player Name, Starting chips
   - bet      : deduct initial bet from chips.  optional: (simple validation: can't under or over bet chips than current balance)
@@ -71,7 +71,7 @@ Plan how to approach a way to create and code this game.
 
   
 
-- Dealer/House - optional. 
+- ##### Dealer/House - optional. 
 
   - Dealer            :   has a hand
 
@@ -85,17 +85,13 @@ Plan how to approach a way to create and code this game.
 
     
 
-- StartGame
+- ##### StartGame
 
    - playGame : starts game
 
      
 
-- GameRound / virtTable : Descriptive NameSpace where the game takes place
+- ##### GameRound / virtTable 							
 
-  	- .round         : Player through a round of blackjack
-	- .endRound  :  decide outcome .  
-  	- 
-  
-  ​	
-still working on it. more info to to added.
+   - .round         : Player through a round of blackjack
+   - .endRound  :  decide outcome.  
