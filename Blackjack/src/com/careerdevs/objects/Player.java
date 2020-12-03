@@ -19,6 +19,7 @@ public class Player {
 		this.chips = chips;
 		this.hand = new ArrayList<>();
 	}
+	
 
 	public List<Card> dealCards(Deck deck, int card) {
 		for (int idx = 0; idx < card; idx++) {

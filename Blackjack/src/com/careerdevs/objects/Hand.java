@@ -7,31 +7,33 @@ import com.careerdevs.ui.Console;
 
 public class Hand {
 
-	private String owner;
-	private static List<Card> hand;
-
-	public Hand(String owner) {
-		this.hand = new ArrayList<>();
-		this.owner = this.owner;
-	}
+	private List<Card> cards = new ArrayList<>();
 
 	public List<Card> dealCards(Deck deck, int card) {
 		for (int idx = 0; idx < card; idx++) {
-			hand.add(deck.draw());
+			cards.add(deck.draw());
 		}
-		return hand;
+		return cards;
 	}
 
-	public static int addUpCards(List<Card> cards) {
-		return cards.stream().mapToInt(card -> card.getValue()).sum();
+	public int getCount() {
+		return cards.size();
 	}
 
-	public static void showHand(List<Card> playerHand) {
-		Console.displayHand(playerHand);
+	public int addUpCards() {
+		int total = 0;
+		for (Card card : cards) {
+			if (card.getValue() > 10) {
+				total += 10;
+			} else {
+				total += card.getValue();
+			}
+		}
+		return total;
 	}
 
-	public String getOwner() {
-		return owner;
+	public void showHand() {
+		Console.displayHand(cards);
 	}
 
 }
