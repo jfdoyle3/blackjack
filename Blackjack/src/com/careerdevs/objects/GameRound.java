@@ -2,7 +2,10 @@ package com.careerdevs.objects;
 
 import java.util.List;
 
+import com.careerdevs.cards.Card;
+import com.careerdevs.cards.Deck;
 import com.careerdevs.ui.Console;
+import com.careerdevs.ui.ErrorConsole;
 import com.careerdevs.ui.Input;
 
 public class GameRound {
@@ -74,11 +77,36 @@ public class GameRound {
 		} 
 		if(dealerHand < playerHand) {
 			Console.win("Player");
-			System.out.printf("\nPlayers wins--> %d ", Player.wins(chips));
+		//	System.out.printf("\nPlayers wins--> %d ", Player.wins(chips));
 		}
 		if (dealerHand == playerHand) {
 			Console.push();
 
 		}
+
+//		public static int wins(int chipsBet) {
+//			int chipsWon = chipsBet * 2;
+//			return chipsWon;
+//
+//		}
 	}
-}
+		public static int placeBet(int chips) {
+			boolean betPlaced = false;
+			Console.bet(chips);
+			do {
+				int betAmount = Input.inputNumber();
+				if (betAmount > chips) {
+					betPlaced = false;
+					ErrorConsole.errorBet(chips);
+				} else {
+					betPlaced = true;
+					chips -= betAmount;
+				}
+			} while (!betPlaced);
+			return setChips(chips);
+		}
+		private static int setChips(int chips) {
+			return chips;
+		}
+	}
+

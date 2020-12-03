@@ -1,4 +1,4 @@
-package com.careerdevs.objects;
+package com.careerdevs.cards;
 
 import java.util.List;
 

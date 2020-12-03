@@ -2,7 +2,7 @@ package com.careerdevs.ui;
 
 import java.util.List;
 
-import com.careerdevs.objects.Card;
+import com.careerdevs.cards.Card;
 import com.careerdevs.objects.Dealer;
 
 public class Console {

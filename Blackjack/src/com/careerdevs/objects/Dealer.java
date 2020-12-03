@@ -3,6 +3,8 @@ package com.careerdevs.objects;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.careerdevs.cards.Card;
+import com.careerdevs.cards.Deck;
 import com.careerdevs.ui.Console;
 
 public class Dealer {
