@@ -14,19 +14,16 @@ public class Dealer implements Actor {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return NAME;
 	}
 
 	@Override
 	public int getBet() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getAction(int score) {
-		// TODO Auto-generated method stub
 		return score<DECISION ? HIT:STAND;
 	}
 	

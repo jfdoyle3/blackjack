@@ -2,3 +2,5 @@ eclipse.preferences.version=1
 encoding//src/com/careerdevs/cards/Card.java=UTF-8
 encoding//src/com/careerdevs/cards/Deck.java=UTF-8
 encoding//src/com/careerdevs/cards/GameDeck.java=UTF-8
+encoding//src/com/careerdevs/cards/SingleCard.java=UTF-8
+encoding//src/com/careerdevs/game/Game.java=UTF-8

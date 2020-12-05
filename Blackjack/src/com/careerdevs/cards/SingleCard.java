@@ -8,7 +8,7 @@ public class SingleCard implements Deck {
 	}
 	
 	public Card draw() {
-		return new Card(1,"clubs");
+		return new Card(1,"♠");
 	}
 	
 	public boolean deckEmpty() {

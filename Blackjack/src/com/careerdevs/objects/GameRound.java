@@ -18,8 +18,7 @@ public class GameRound {
 		boolean play = true;
 		do {
 			Console.displayHand(playerHand);
-			int handTotal = findAce(playerHand);
-		//	boolean ace=Card.getAce(playerHand);
+			int handTotal = 0;
 			if (handTotal > 21) {
 				Console.bust(name, handTotal);
 				stands = 0;
@@ -35,10 +34,10 @@ public class GameRound {
 				Console.consoleHit(handTotal);
 				String choice = Input.inputString();
 				if (choice.toLowerCase().equals("h")) {
-					Dealer.hit(deck, playerHand);
+				//	Dealer.hit(deck, playerHand);
 				}
 				if (choice.toLowerCase().equals("s")) {
-					stands = Dealer.stand(playerHand);
+				//	stands = Dealer.stand(playerHand);
 					Console.stand("Player", stands);
 					play = false;
 				}
@@ -47,10 +46,10 @@ public class GameRound {
 			if (name.equals("Dealer")) {
 				 System.out.println();
 				if (handTotal < 17) {
-					Dealer.hit(deck, playerHand);
+				//	Dealer.hit(deck, playerHand);
 				}
 				if (handTotal > 17) {
-					stands = Dealer.stand(playerHand);
+				//	stands = Dealer.stand(playerHand);
 					Console.stand(name, stands);
 					play = false;
 				}
@@ -60,15 +59,15 @@ public class GameRound {
 		return stands;
 	}
 
-	private static int findAce(List<Card> playerHand) {
-	//	boolean ace = Card.getAce(playerHand);
-		int handTotal = Dealer.addUpCards(playerHand);
-//		if (ace && handTotal <=21) {
-//			handTotal = Dealer.addUpCards(playerHand) + 10;
-//		}
-		
-		return handTotal;
-	}
+//	private static int findAce(List<Card> playerHand) {
+//	//	boolean ace = Card.getAce(playerHand);
+////		int handTotal = Dealer.addUpCards(playerHand);
+////		if (ace && handTotal <=21) {
+////			handTotal = Dealer.addUpCards(playerHand) + 10;
+////		}
+//		
+//		return handTotal;
+//	}
 
 	public static void endRound(int dealerHand, int playerHand, int chips) {
 			
