@@ -3,6 +3,8 @@ package com.careerdevs.objects;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.careerdevs.cards.Card;
+import com.careerdevs.cards.Deck;
 import com.careerdevs.cards.Hand;
 import com.careerdevs.ui.Console;
 import com.careerdevs.ui.ErrorConsole;
@@ -11,18 +13,16 @@ import com.careerdevs.ui.Input;
 public class Player {
 
 	private int bet;
-	private int chips;
+	private int cash;
 	private Hand hand;
 	private String type;
 	private String playerName;
 
-	public Player(String playerName, int chips, Hand hand){
-		this.playerName=playerName;
-		this.chips = chips;
-		this.hand = hand;
-		this.type="player";
+	public Player(String playerName, int cash) {
+		this.playerName = playerName;
+		this.cash = cash;
+		this.type = "player";
 	}
-
 
 //	public List<Card> dealCards(Deck deck, int card) {
 //		for (int idx = 0; idx < card; idx++) {
@@ -31,17 +31,21 @@ public class Player {
 //		return hand;
 //	}
 
-
-
-	public int getBet() {
-		return bet;
+//	public static void hit(Deck deck, Hand hand) {
+//		hand.add(deck.draw());
+//	}
+	
+	public int getCash() {
+		return cash;
 	}
-
-	public int getChips() {
-		return chips;
+	
+	public Hand getHand() {
+		return hand;
 	}
-
-
+	
+	public String getType() {
+		return type;
+	}
 
 //	public  static void dealCards() {
 //		Deck deck = new Deck();

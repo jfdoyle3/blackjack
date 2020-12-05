@@ -11,16 +11,16 @@ public class Game {
 
 	Deck deck = new GameDeck();
 	deck.shuffle();
-	Hand hand=new Hand();
+	Hand hand=new Hand(Dealer);
 	hand.dealCards(deck, 3);
-	hand.showHand();
-	System.out.println("\ntotal: "+hand.addUpCards());
+	//hand.showHand();
+	//System.out.println("\ntotal: "+hand.addUpCards());
 	
-	System.out.println("\nend of Line");
+	Player player1=new Player("Player1",2);
 	
-	Player player1=new Player("Player1",2,hand);
-	
+	System.out.println("Player1 : ");
 
+	System.out.println("\nend of Line");
 	}
 
 }

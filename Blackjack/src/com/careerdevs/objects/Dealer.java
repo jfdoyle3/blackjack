@@ -5,35 +5,30 @@ import java.util.List;
 
 import com.careerdevs.cards.Card;
 import com.careerdevs.cards.Deck;
-import com.careerdevs.ui.Console;
 
-public class Dealer {
+public class Dealer implements Actor {
+	static String NAME="Dealer";
+	static int DECISION=17;
+	static int HIT=1;
+	static int STAND=2;
 
-	private static boolean turn = false;
-	private static List<Card> hand;
-
-	public Dealer() {
-		Dealer.hand = new ArrayList<>();
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return NAME;
 	}
 
-	public List<Card> dealCards(Deck deck, int card) {
-		for (int idx = 0; idx < card; idx++) {
-			hand.add(deck.draw());
-		}
-		return hand;
+	@Override
+	public int getBet() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public static int addUpCards(List<Card> cards) {
-		return cards.stream().mapToInt(card -> card.getValue()).sum();
+	@Override
+	public int getAction(int score) {
+		// TODO Auto-generated method stub
+		return score<DECISION ? HIT:STAND;
 	}
-
-	public static void hit(Deck deck, List<Card> hand) {
-		hand.add(deck.draw());
-	}
-
-	public static int stand(List<Card> playerHand) {
-		turn = true;
-		return addUpCards(playerHand);
-	}
+	
 
 }

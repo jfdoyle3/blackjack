@@ -1,6 +1,6 @@
 package com.careerdevs.cards;
 
-public class OpenDeck implements Deck {
+public class SingleCard implements Deck {
 	
 	
 	public void shuffle() {
