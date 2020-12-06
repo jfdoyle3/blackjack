@@ -40,11 +40,7 @@ public class Hand {
 		boolean aceHigh = true;
 		for (Card card : cards) {
 
-			if (card.getValue() > 10) {
-				total += 10;
-			} else {
-				total += card.getValue();
-			}
+			
 			if (card.getValue() == 1 && total+11 > 22) {
 				System.out.println("\n\nfoundAH:-" + aceHigh);
 				total -= 10;
@@ -55,7 +51,11 @@ public class Hand {
 				total += 10;
 				aceHigh = false;
 			}
-
+			if (card.getValue() > 10) {
+				total += 10;
+			} else {
+				total += card.getValue();
+			}
 		}
 		return total;
 	}

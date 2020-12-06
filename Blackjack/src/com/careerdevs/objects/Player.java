@@ -10,7 +10,7 @@ import com.careerdevs.ui.Console;
 import com.careerdevs.ui.ErrorConsole;
 import com.careerdevs.ui.Input;
 
-public class Player {
+public class Player implements Actor {
 
 	private int bet;
 	private int cash;
@@ -23,6 +23,8 @@ public class Player {
 		this.cash = cash;
 		this.type = "player";
 	}
+	
+	
 
 //	public List<Card> dealCards(Deck deck, int card) {
 //		for (int idx = 0; idx < card; idx++) {
@@ -35,6 +37,11 @@ public class Player {
 //		hand.add(deck.draw());
 //	}
 	
+	public String getName() {
+		return playerName;
+	}
+
+
 	public int getCash() {
 		return cash;
 	}
@@ -45,6 +52,22 @@ public class Player {
 	
 	public String getType() {
 		return type;
+	}
+
+
+
+	@Override
+	public int getBet() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+	@Override
+	public int getAction(int score) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 //	public  static void dealCards() {
