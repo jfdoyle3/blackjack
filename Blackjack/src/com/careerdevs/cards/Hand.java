@@ -15,12 +15,17 @@ public class Hand {
 		this.actor = actor;
 	}
 
+	@Override
+	public String toString() {
+		return "Hand [cards=" + cards + ", actor=" + actor + "]";
+	}
+
 	// TODO: add a constructor takes one card for a split;
 	public Actor getActor() {
 		return actor;
 	}
 
-	public void addCard(Card card) {
+	public void dealCard(Card card) {
 		cards.add(card);
 	}
 
@@ -42,14 +47,14 @@ public class Hand {
 
 			
 			if (card.getValue() == 1 && total+11 > 22) {
-				System.out.println("\n\nfoundAH:-" + aceHigh);
+			//	System.out.println("\n\nfoundAH:-" + aceHigh);
 				total -= 10;
-				aceHigh = true;
+				aceHigh = false;
 			}
 			if (card.getValue() == 1 && aceHigh && total <= 21) {
-				System.out.println("\n\nfoundAH:+" + aceHigh);
+			//	System.out.println("\n\nfoundAH:+" + aceHigh);
 				total += 10;
-				aceHigh = false;
+				aceHigh = true;
 			}
 			if (card.getValue() > 10) {
 				total += 10;
