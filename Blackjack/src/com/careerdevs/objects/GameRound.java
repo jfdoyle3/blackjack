@@ -32,7 +32,7 @@ public class GameRound {
 			}
 			if (name.equals("Player")) {
 				Console.consoleHit(handTotal);
-				String choice = Input.inputString();
+				String choice = Input.inputString("hit or Stand");
 				if (choice.toLowerCase().equals("h")) {
 				//	Dealer.hit(deck, playerHand);
 				}
@@ -93,7 +93,7 @@ public class GameRound {
 			boolean betPlaced = false;
 			Console.bet(chips);
 			do {
-				int betAmount = Input.inputNumber();
+				int betAmount = Input.inputNumber("Bet?");
 				if (betAmount > chips) {
 					betPlaced = false;
 					ErrorConsole.errorBet(chips);

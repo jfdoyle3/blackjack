@@ -15,9 +15,8 @@ public class Hand {
 		this.actor = actor;
 	}
 
-	@Override
-	public String toString() {
-		return "Hand [cards=" + cards + ", actor=" + actor + "]";
+	public String getName() {
+		return actor.getName();
 	}
 
 	// TODO: add a constructor takes one card for a split;
@@ -25,7 +24,7 @@ public class Hand {
 		return actor;
 	}
 
-	public void dealCard(Card card) {
+	public void getCard(Card card) {
 		cards.add(card);
 	}
 

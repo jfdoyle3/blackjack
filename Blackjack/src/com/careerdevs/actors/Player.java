@@ -13,15 +13,17 @@ import com.careerdevs.ui.Input;
 public class Player implements Actor {
 
 	private int bet;
-	private int cash;
 	private Hand hand;
 	private String type;
+	private Input input=new Input();
 	private String playerName;
+	static int HIT=1, STAND=2, DOUBLE=3, SPLIT=4;
+	private int cash;
 
-	public Player(String playerName, int cash) {
-		this.playerName = playerName;
+	public Player() {
+		this.playerName = input.inputString("What is your name? ");
 		this.cash = cash;
-		this.type = "player";
+		
 	}
 
 //	public List<Card> dealCards(Deck deck, int card) {
@@ -39,10 +41,6 @@ public class Player implements Actor {
 		return playerName;
 	}
 
-	public int getCash() {
-		return cash;
-	}
-
 	public Hand getHand() {
 		return hand;
 	}
@@ -52,12 +50,12 @@ public class Player implements Actor {
 	}
 
 	@Override
-	public int getBet() {
+	public int setBet() {
 		boolean betPlaced = false;
 		Console.bet(cash);
 		do {
-			 bet = Input.inputNumber();
-			if (bet > cash) {
+			 bet = Input.inputNumber("bet? ");
+			if (bet > cash && bet<0) {
 				betPlaced = false;
 				ErrorConsole.errorBet(cash);
 			} else {
@@ -71,16 +69,9 @@ public class Player implements Actor {
 
 	@Override
 	public int getAction(int score) {
+			int option=1;
 		
-		switch(score) {
-		
-		case 1 -> System.out.println("Hit");
-		case 2 -> System.out.println("Stand");
-		
-		}
-		
-		
-		return 0;
+		return option;
 	}
 
 //	public  static void dealCards() {

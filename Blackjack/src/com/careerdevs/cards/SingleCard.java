@@ -1,5 +1,7 @@
 package com.careerdevs.cards;
 
+import com.careerdevs.ui.Input;
+
 public class SingleCard implements Deck {
 	
 	
@@ -8,7 +10,10 @@ public class SingleCard implements Deck {
 	}
 	
 	public Card draw() {
-		return new Card(1,"♠");
+		Input input=new Input();
+		int cardValue= input.inputNumber("card value: ");
+		String cardSuit=input.inputString("card suit: ");
+		return new Card(cardValue,cardSuit);
 	}
 	
 	public boolean deckEmpty() {

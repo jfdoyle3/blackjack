@@ -18,7 +18,7 @@ public class Dealer implements Actor {
 	}
 
 	@Override
-	public int getBet() {
+	public int setBet() {
 		return 0;
 	}
 
