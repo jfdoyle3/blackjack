@@ -25,6 +25,11 @@ public class Game {
 		myHand.getCard(deck.draw());
 		
 		showTable(dealerHand, myHand);
+		dealerHand.getCard(deck.draw());
+		dealerHand.getCard(deck.draw());
+		myHand.getCard(deck.draw());
+		myHand.getCard(deck.draw());
+		showTable(dealerHand, myHand);
 		//System.out.print(myHand.getName() + ": ");
 //		myHand.showHand();
 //		System.out.println(myHand.addUpCards());
