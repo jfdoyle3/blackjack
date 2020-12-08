@@ -1,13 +1,13 @@
 package com.careerdevs.game;
 
+import com.careerdevs.actors.Actor;
+import com.careerdevs.actors.Dealer;
+import com.careerdevs.actors.Player;
 import com.careerdevs.cards.Card;
 import com.careerdevs.cards.Deck;
 import com.careerdevs.cards.GameDeck;
 import com.careerdevs.cards.SingleCard;
 import com.careerdevs.cards.Hand;
-import com.careerdevs.objects.Actor;
-import com.careerdevs.objects.Dealer;
-import com.careerdevs.objects.Player;
 
 public class Game {
 
@@ -32,12 +32,13 @@ public class Game {
 
 		showTable(dealerHand, playerHand);
 
-		int bet = player.getBet();
-
-		System.out.println("bet: " + bet);
+		//int bet = player.getBet();
+		int dBet=dealer.getBet();
+		System.out.println("bet: " +dBet);
+		//int dealerChoice=dealer.getAction(dealerHand.addUpCards());
+		//showTable(dealerHand, playerHand);
 		
-		int dealerChoice=dealer.getAction(dealerHand.addUpCards());
-		System.out.println(dealerChoice);
+		
 
 	}
 

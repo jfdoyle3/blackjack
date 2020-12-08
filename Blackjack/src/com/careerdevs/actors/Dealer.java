@@ -1,4 +1,4 @@
-package com.careerdevs.objects;
+package com.careerdevs.actors;
 
 import java.util.ArrayList;
 import java.util.List;

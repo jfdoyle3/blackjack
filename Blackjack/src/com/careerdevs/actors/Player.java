@@ -1,4 +1,4 @@
-package com.careerdevs.objects;
+package com.careerdevs.actors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +72,12 @@ public class Player implements Actor {
 	@Override
 	public int getAction(int score) {
 		
+		switch(score) {
+		
+		case 1 -> System.out.println("Hit");
+		case 2 -> System.out.println("Stand");
+		
+		}
 		
 		
 		return 0;

@@ -3,7 +3,7 @@ package com.careerdevs.cards;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.careerdevs.objects.Actor;
+import com.careerdevs.actors.Actor;
 import com.careerdevs.ui.Console;
 
 public class Hand {

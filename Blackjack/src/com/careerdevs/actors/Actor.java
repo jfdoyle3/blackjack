@@ -1,4 +1,4 @@
-package com.careerdevs.objects;
+package com.careerdevs.actors;
 
 public interface Actor {
 	String name="Actor";
