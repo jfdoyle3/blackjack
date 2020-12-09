@@ -1,14 +1,15 @@
 package com.careerdevs.main;
 
 
-import com.careerdevs.game.Game;
+import com.careerdevs.objects.BlackJack;
 
 public class Main {
 
 	public static void main(String[] args) {
 
 	
-		Game.playGame();
+	//	Game.playGame();
+		BlackJack.play();
 		
 		
 		

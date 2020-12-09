@@ -10,6 +10,7 @@ public class Hand {
 
 	private List<Card> cards = new ArrayList<>(); 
 	private Actor actor;
+	public int bet;
 
 	public Hand(Actor actor) {
 		this.actor = actor;

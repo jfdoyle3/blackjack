@@ -14,7 +14,7 @@ public class Player implements Actor {
 
 	private int bet;
 	private Hand hand;
-	private String type;
+	private String type="player";
 	private Input input=new Input();
 	private String playerName;
 	static int HIT=1, STAND=2, DOUBLE=3, SPLIT=4;
