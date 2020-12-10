@@ -29,12 +29,10 @@ public class Hand {
 		cards.add(card);
 	}
 
-	public List<Card> dealCards(Deck deck, int card) {
-		for (int idx = 0; idx < card; idx++) {
-			cards.add(deck.draw());
-		}
-		return cards;
+	public int getBet() {
+		return actor.setBet();
 	}
+
 
 	public int getCount() {
 		return cards.size();

@@ -12,41 +12,20 @@ import com.careerdevs.ui.Input;
 
 public class Player implements Actor {
 
-	private int bet;
-	private Hand hand;
-	private String type="player";
-	private Input input=new Input();
+	private Input input = new Input();
 	private String playerName;
-	static int HIT=1, STAND=2, DOUBLE=3, SPLIT=4;
+	static int HIT = 1, STAND = 2, DOUBLE = 3, SPLIT = 4;
 	private int cash;
+	private int bet;
 
 	public Player() {
-		this.playerName = input.inputString("What is your name? ");
-		this.cash = cash;
-		
+		this.playerName = Input.inputStringText("What is your name? ");
+		this.cash = 2000;
+
 	}
-
-//	public List<Card> dealCards(Deck deck, int card) {
-//		for (int idx = 0; idx < card; idx++) {
-//			hand.add(deck.draw());
-//		}
-//		return hand;
-//	}
-
-//	public static void hit(Deck deck, Hand hand) {
-//		hand.add(deck.draw());
-//	}
 
 	public String getName() {
 		return playerName;
-	}
-
-	public Hand getHand() {
-		return hand;
-	}
-
-	public String getType() {
-		return type;
 	}
 
 	@Override
@@ -54,35 +33,41 @@ public class Player implements Actor {
 		boolean betPlaced = false;
 		Console.bet(cash);
 		do {
-			 bet = Input.inputNumber("bet? ");
-			if (bet > cash && bet<0) {
+			bet = Input.inputNumber();
+			if (bet > cash && bet < 0) {
 				betPlaced = false;
 				ErrorConsole.errorBet(cash);
 			} else {
 				betPlaced = true;
-				cash -= bet;
 			}
 		} while (!betPlaced);
-		
+
 		return bet;
 	}
 
 	@Override
 	public int getAction(int score) {
-			int option=1;
-		
+		int option;
+		do {
+			option = Input.inputNumberText("Choices: 1-Hit or 2-Stand? ");
+
+		} while (option < 1 || option > 2);
+
 		return option;
 	}
 
-//	public  static void dealCards() {
-//		Deck deck = new Deck();
-//		deck.shuffleDeck();
-//		for (int idx = 0; idx < 4; idx++) {
-//			Card topCard = deck.drawCard(idx);
-//			if (idx % 2 == 0) {
-//				hand.add(topCard);
-//			} else {
-//				dealer.add(topCard);
-//			}
-//		}
+	public void addCash(int amount) {
+		cash += amount;
+	}
+
+	public void addCash(int amount, String condition) {
+		switch (condition) {
+		case "win":
+			cash += amount;
+			break;
+		case "lose":
+			cash -= amount;
+			break;
+		}
+	}
 }

@@ -11,8 +11,8 @@ public class SingleCard implements Deck {
 	
 	public Card draw() {
 		Input input=new Input();
-		int cardValue= input.inputNumber("card value: ");
-		String cardSuit=input.inputString("card suit: ");
+		int cardValue= input.inputNumberText("card value: ");
+		String cardSuit=input.inputStringText("card suit: ");
 		return new Card(cardValue,cardSuit);
 	}
 	
