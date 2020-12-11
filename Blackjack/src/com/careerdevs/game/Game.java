@@ -11,47 +11,43 @@ public class Game {
 
 	private Table table = new Table();
 	private boolean choiceResult;
+	private boolean turn = true;
 
 	public void playGame() {
 		table.getDeck().shuffle();
 
-		int bet = table.getPlayersHand().getBet();
+		int bet = table.getPlayers().getBet();
 		Console.horzLine();
-		Console.placedBet(table.getPlayersHand(), bet);
+		Console.placedBet(table.getPlayers(), bet);
 		Console.horzLine();
-	//	do {
 		dealCards();
-		playersTurn();
-		//dealersTurn();
-	//	}while();
+		// TODO: Play a round till everyone is completed their turn.
 
-		// TODO: Decide winner
-		System.out.println(table.getPlayersHand().addUpCards());
+		gameTurn(table.getPlayers());
+		// playersTurn();
+		// dealersTurn();
+
+		// TODO: Decide winner / handle what happens to bet
+		endRound(table.getDealers().addUpCards(), table.getPlayers().addUpCards(), bet);
 		// TODO: handle what happens to bet
 		// TODO: check players wallet to continue or end.
 		System.out.println("\nend of Line");
 	}
 
-	private void playersTurn() {
-		showTable(table.getDealersHand(), table.getPlayersHand());
-		Actor player = table.getPlayersHand().getActor();
-		int choice = player.getAction(table.getPlayersHand().addUpCards());
-		choiceResult = choice(table.getPlayersHand(), choice);
-	}
+	private boolean gameTurn(Hand hand) {
+		hand.showHand();
+		int choice = hand.getActor().getAction(hand.addUpCards());
+		choiceResult = choice(hand, choice);
+		return choiceResult;
 
-	private void dealersTurn() {
-		showTable(table.getDealersHand(), table.getPlayersHand());
-		Actor dealer = table.getDealersHand().getActor();
-		int choice = dealer.getAction(table.getDealersHand().addUpCards());
-		choiceResult = choice(table.getDealersHand(), choice);
 	}
 
 	public void dealCards() {
 		for (int idx = 0; idx < 4; idx++) {
 			if (idx % 2 == 0) {
-				table.getPlayersHand().getCard(table.getDeck().draw());
+				table.getPlayers().getCard(table.getDeck().draw());
 			} else {
-				table.getDealersHand().getCard(table.getDeck().draw());
+				table.getDealers().getCard(table.getDeck().draw());
 			}
 		}
 	}
@@ -81,7 +77,7 @@ public class Game {
 		}
 	}
 
-	public static void endRound(int dealerHand, int playerHand, int chips) {
+	public void endRound(int dealerHand, int playerHand, int chips) {
 
 		if (dealerHand > playerHand) {
 			// cash - bet;

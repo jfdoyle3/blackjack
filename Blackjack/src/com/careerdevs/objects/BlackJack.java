@@ -12,13 +12,13 @@ public class BlackJack {
 		
 		table.getDeck().shuffle();
 
-		table.getDealersHand().getCard(table.getDeck().draw());
-		table.getDealersHand().getCard(table.getDeck().draw());
+		table.getDealers().getCard(table.getDeck().draw());
+		table.getDealers().getCard(table.getDeck().draw());
 	
 		displayTable();
 		
-		Actor dealer=table.getDealersHand().getActor();
-		int choice=dealer.getAction(table.getDealersHand().addUpCards());
+		Actor dealer=table.getDealers().getActor();
+		int choice=dealer.getAction(table.getDealers().addUpCards());
 		
 		
 
@@ -26,9 +26,9 @@ public class BlackJack {
 	}
 
 	private void displayTable() {
-		System.out.print(table.getDealersHand().getName() + " -> ");
-		table.getDealersHand().showHand();
-		System.out.println(" Hand total: " + table.getDealersHand().addUpCards());
+		System.out.print(table.getDealers().getName() + " -> ");
+		table.getDealers().showHand();
+		System.out.println(" Hand total: " + table.getDealers().addUpCards());
 	}
 	
 	

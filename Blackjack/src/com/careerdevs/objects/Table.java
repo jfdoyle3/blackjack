@@ -8,20 +8,20 @@ import com.careerdevs.cards.Hand;
 
 public class Table {
 
-	private Hand playersHand = new Hand(new Player());
-	private Hand dealersHand = new Hand(new Dealer());
+	private Hand players = new Hand(new Player());
+	private Hand dealers = new Hand(new Dealer());
 	private Deck deck = new GameDeck();
 
 	public Deck getDeck() {
 		return deck;
 	}
 
-	public Hand getDealersHand() {
-		return dealersHand;
+	public Hand getDealers() {
+		return dealers;
 	}
 
-	public Hand getPlayersHand() {
-		return playersHand;
+	public Hand getPlayers() {
+		return players;
 	}
 
 }
