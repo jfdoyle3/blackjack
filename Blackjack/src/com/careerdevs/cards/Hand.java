@@ -37,7 +37,16 @@ public class Hand {
 	public int getCount() {
 		return cards.size();
 	}
-
+	
+    @Override
+    public String toString() {
+        String output = "";
+        for (var card : cards) {
+            output += card.isFaceDown() ? "<*> " : card + " ";
+        }
+        return output.trim();
+    }
+    
 	public int addUpCards() {
 		int total = 0;
 		boolean aceHigh = true;

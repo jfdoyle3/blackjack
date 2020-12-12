@@ -12,8 +12,8 @@ public class BlackJack {
 		
 		table.getDeck().shuffle();
 
-		table.getDealers().getCard(table.getDeck().draw());
-		table.getDealers().getCard(table.getDeck().draw());
+		table.getDealers().getCard(table.getDeck().draw(true));
+		table.getDealers().getCard(table.getDeck().draw(true));
 	
 		displayTable();
 		

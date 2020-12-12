@@ -67,9 +67,9 @@ public class BlackJackGame {
 	public void dealCards() {
 		for (int idx = 0; idx < 4; idx++) {
 			if (idx % 2 == 0) {
-				table.getPlayers().getCard(table.getDeck().draw());
+				table.getPlayers().getCard(table.getDeck().draw(true));
 			} else {
-				table.getDealers().getCard(table.getDeck().draw());
+				table.getDealers().getCard(table.getDeck().draw(true));
 			}
 		}
 	}
@@ -77,7 +77,7 @@ public class BlackJackGame {
 	public boolean choice(Hand hand, int action) {
 		switch (action) {
 		case 1:
-			Card card = table.getDeck().draw();
+			Card card = table.getDeck().draw(true);
 			Console.hit(hand, card);
 			hand.getCard(card);
 			if (hand.addUpCards() > 21) {
