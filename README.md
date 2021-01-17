@@ -1,6 +1,8 @@
 # blackjack
 
 Create the game of Blackjack in Java.
+TODO:
+Create a react frontend
 
 Plan how to approach a way to create and code this game.
 
